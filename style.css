@@ -1,0 +1,177 @@
+:root {
+    --bg-color: #030207;
+    --text-color: #eee;
+    --text-color-guide: #aaaabc;
+    --text-big: 6rem;
+    --text-sm: 2rem;
+    --text-question: 2.2rem;
+
+    --image-opacity: .12;
+    --font-ghosted: 'BloodLust', sans-serif;
+}
+
+@font-face {
+    font-family: 'BloodLust';
+    src: url('./assets/BloodLust.ttf');
+}
+
+body {
+    margin: 0;
+    cursor: crosshair;
+    background-color: var(--bg-color);
+    height: 100%;
+    overflow: hidden;
+}
+
+.cover {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: .3s;
+}
+
+
+.question {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: .3s;
+}
+
+.cover.is-active,
+.question.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.question-img {
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100%;
+    opacity: var(--image-opacity);
+}
+
+.question button {
+    border: none;
+    background-color: transparent;
+    outline: 0;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.question button:hover svg {
+    transform: rotate3d(5, 10, 20, 360deg);
+}
+
+.question button svg {
+    width: 24px;
+    transition: .3s;
+}
+
+
+.cover img {
+    height: 100%;
+    opacity: var(--image-opacity);
+}
+
+.truth-or-dare {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.truth-or-dare button {
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .3s;
+}
+
+.truth-or-dare button:hover {
+    color: red;
+}
+
+.truth:hover {
+    transform: rotate3d(2, 5, 10, 20deg);
+}
+
+.dare:hover {
+    transform: rotate3d(2, 5, 10, -20deg);
+}
+
+.paint-text {
+    color: var(--text-color)
+}
+
+.text-big {
+    font-size: var(--text-big);
+}
+
+.text-ghosted {
+    font-family: var(--font-ghosted);
+}
+
+.text-question {
+    font-size: var(--text-question);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+
+.guide {
+    border: 1px solid var(--text-color-guide);
+    border-radius: 99rem;
+    padding: .35rem 1rem;
+    background-color: transparent;
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color-guide);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+.music-credit {
+    bottom: 1rem;
+    border: none;
+    padding: 0;
+}
+
+
+.music-credit a {
+    color: orangered;
+    text-decoration: none;
+}
