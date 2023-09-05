@@ -178,7 +178,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-    .music-credit {
+    .music-credit span {
         display: flex;
         flex-direction: column;
         align-items: center;
