@@ -107,6 +107,13 @@ body {
     gap: 2rem;
 }
 
+@media screen and (max-width: 400px) {
+    .truth-or-dare {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
 .truth-or-dare button {
     border: none;
     outline: 0;
@@ -170,6 +177,13 @@ body {
     padding: 0;
 }
 
+@media screen and (max-width: 400px) {
+    .music-credit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .music-credit a {
     color: orangered;
