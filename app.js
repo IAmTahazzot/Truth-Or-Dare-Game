@@ -112,8 +112,3 @@ class TruthOrDare {
 
 const Game = new TruthOrDare();
 Game.init();
-
-// alert :)
-// confirm('------ Truth or Dare ------ \n \n Remember, You cannot escape once you in! 👻 choose wisely.')
-//     ? Game.init()
-//     : window.close();
